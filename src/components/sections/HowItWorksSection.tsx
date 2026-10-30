@@ -8,28 +8,28 @@ export function HowItWorksSection() {
       title: "Assess",
       desc: "Students take chapter-wise quizzes or mock tests aligned with CBSE, ICSE, or IGCSE.",
       icon: BookCheck,
-      color: "text-purple-600 dark:text-purple-400",
+      color: "text-[#106FE2]",
     },
     {
       num: "02",
       title: "Analyze",
       desc: "AI evaluates answers instantaneously, pinpointing knowledge gaps and misconceptions.",
       icon: Cpu,
-      color: "text-sky-600 dark:text-sky-400",
+      color: "text-[#FE730A]",
     },
     {
       num: "03",
       title: "Improve",
       desc: "Receive step-by-step reasoning explanations and targeted remedial practice drills.",
       icon: Sparkles,
-      color: "text-amber-600 dark:text-amber-400",
+      color: "text-[#106FE2]",
     },
     {
       num: "04",
       title: "Track Progress",
       desc: "Students, teachers, and parents review real-time mastery growth and progress reports.",
       icon: TrendingUp,
-      color: "text-emerald-600 dark:text-emerald-400",
+      color: "text-[#FE730A]",
     },
   ];
 
@@ -37,7 +37,7 @@ export function HowItWorksSection() {
     <section id="how-it-works" className="py-16 md:py-20 bg-white dark:bg-[#070913] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">The Smarter Learning Loop</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#106FE2]">The Smarter Learning Loop</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 transition-colors">
             How It Works
           </h2>
@@ -52,7 +52,7 @@ export function HowItWorksSection() {
             return (
               <div
                 key={st.num}
-                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-purple-400 dark:hover:border-purple-500/40 shadow-xs dark:shadow-none transition-all flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-[#106FE2]/40 shadow-xs dark:shadow-none transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

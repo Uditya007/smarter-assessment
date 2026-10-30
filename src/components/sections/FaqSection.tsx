@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { faqList } from "@/config/faq.config";
 
 export function FaqSection() {
@@ -15,7 +15,7 @@ export function FaqSection() {
     <section id="faq" className="py-16 md:py-20 bg-slate-50 dark:bg-[#070914] border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Common Questions</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#106FE2]">Common Questions</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 transition-colors">
             Frequently Asked Questions
           </h2>
@@ -32,7 +32,7 @@ export function FaqSection() {
                 key={item.id}
                 className={`rounded-xl border transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? "bg-purple-50/70 dark:bg-[#0E1328] border-purple-300 dark:border-purple-500/50 shadow-xs"
+                    ? "bg-blue-50/60 dark:bg-[#0C1228] border-[#106FE2]/50 shadow-xs"
                     : "bg-white dark:bg-[#090D1C] border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700"
                 }`}
               >
@@ -43,7 +43,7 @@ export function FaqSection() {
                   className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-mono font-bold text-purple-600 dark:text-purple-400/80">
+                    <span className="text-xs font-mono font-bold text-[#106FE2]">
                       {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                     </span>
                     <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug transition-colors">
@@ -52,8 +52,10 @@ export function FaqSection() {
                   </div>
 
                   <div
-                    className={`w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 transition-transform duration-200 flex-shrink-0 ${
-                      isOpen ? "rotate-180 bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-200" : ""
+                    className={`w-6 h-6 rounded-full flex items-center justify-center transition-transform duration-200 flex-shrink-0 ${
+                      isOpen
+                        ? "rotate-180 bg-[#106FE2] text-white"
+                        : "bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400"
                     }`}
                   >
                     <ChevronDown className="w-3.5 h-3.5" />
@@ -61,7 +63,7 @@ export function FaqSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-0 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-purple-200/50 dark:border-slate-800/80 mt-1 transition-colors">
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-0 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed border-t border-blue-100 dark:border-slate-800/80 mt-1 transition-colors">
                     {item.answer}
                   </div>
                 )}

@@ -7,42 +7,42 @@ export function FeaturesSection() {
       title: "AI-Powered Assessment",
       desc: "Instant evaluation for MCQs and objective questions with step-by-step reasoning explanations.",
       icon: Brain,
-      color: "text-purple-600 dark:text-purple-400",
+      color: "text-[#106FE2]",
       tags: ["Instant Marking", "Reasoning Explanations", "Configurable Rubrics"],
     },
     {
       title: "Comprehensive Question Bank",
       desc: "Extensive chapter-wise practice questions tailored for CBSE, ICSE, and Cambridge IGCSE syllabi.",
       icon: Database,
-      color: "text-sky-600 dark:text-sky-400",
+      color: "text-[#FE730A]",
       tags: ["Chapter-Wise", "Multiple Formats", "Adjustable Difficulty"],
     },
     {
       title: "Personalized Learning",
       desc: "Identifies knowledge gaps automatically and serves targeted remedial practice drills.",
       icon: Target,
-      color: "text-emerald-600 dark:text-emerald-400",
+      color: "text-[#106FE2]",
       tags: ["Gap Diagnosis", "Adaptive Drills", "Revision Queue"],
     },
     {
       title: "Performance Analytics",
       desc: "Transforms raw test scores into clear charts on accuracy, topic mastery, and question pacing.",
       icon: BarChart3,
-      color: "text-amber-600 dark:text-amber-400",
+      color: "text-[#FE730A]",
       tags: ["Accuracy Tracking", "Speed Diagnostics", "Longitudinal Trends"],
     },
     {
       title: "Teacher & Parent Dashboards",
       desc: "Role-specific portals giving educators class diagnostics and parents simple weekly summaries.",
       icon: Users,
-      color: "text-pink-600 dark:text-pink-400",
+      color: "text-[#106FE2]",
       tags: ["Class Gradebook", "Parent Updates", "PTM Reports"],
     },
     {
       title: "Instant Notifications",
       desc: "Supported messaging integrations for test results, homework reminders, and announcements.",
       icon: MessageSquare,
-      color: "text-indigo-600 dark:text-indigo-400",
+      color: "text-[#FE730A]",
       tags: ["Test Results", "Homework Alerts", "Configurable Setup"],
     },
   ];
@@ -51,7 +51,7 @@ export function FeaturesSection() {
     <section id="features" className="py-16 md:py-20 bg-slate-50 dark:bg-[#090D1E] border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Core Capabilities</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#106FE2]">Core Capabilities</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 transition-colors">
             Everything Needed to Excel
           </h2>
@@ -66,7 +66,7 @@ export function FeaturesSection() {
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white dark:bg-[#0E1326] border border-slate-200 dark:border-slate-800 hover:border-purple-300 dark:hover:border-purple-500/40 shadow-xs hover:shadow-md dark:shadow-none transition-all flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white dark:bg-[#0E1326] border border-slate-200 dark:border-slate-800 hover:border-[#106FE2]/40 shadow-xs hover:shadow-md dark:shadow-none transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="w-11 h-11 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center mb-4 transition-colors">

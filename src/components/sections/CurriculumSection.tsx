@@ -9,7 +9,7 @@ export function CurriculumSection() {
       grades: "Grades 6 to 12",
       desc: "NCERT-aligned concept mastery, competency-based question styles, and board examination simulation.",
       icon: BookOpen,
-      color: "text-sky-600 dark:text-sky-400",
+      color: "text-[#106FE2]",
       subjects: ["Mathematics", "Science", "Social Science", "English"],
     },
     {
@@ -18,7 +18,7 @@ export function CurriculumSection() {
       grades: "Grades 6 to 10",
       desc: "In-depth conceptual rigor, multi-step problem solving, and analytical clarity across sciences and math.",
       icon: Award,
-      color: "text-purple-600 dark:text-purple-400",
+      color: "text-[#FE730A]",
       subjects: ["Mathematics", "Physics", "Chemistry", "Biology"],
     },
     {
@@ -27,7 +27,7 @@ export function CurriculumSection() {
       grades: "Lower Secondary & IGCSE",
       desc: "Global inquiry, investigative problem solving, and criterion-based evaluations across Core & Extended syllabi.",
       icon: Compass,
-      color: "text-emerald-600 dark:text-emerald-400",
+      color: "text-[#106FE2]",
       subjects: ["Extended Math", "Combined Sciences", "Physics", "Chemistry"],
     },
   ];
@@ -36,7 +36,7 @@ export function CurriculumSection() {
     <section id="curriculum" className="py-16 md:py-20 bg-slate-50 dark:bg-[#090D1E] border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Curriculum Coverage</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#106FE2]">Curriculum Coverage</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 transition-colors">
             Designed Around Your Academic Curriculum
           </h2>
@@ -51,14 +51,14 @@ export function CurriculumSection() {
             return (
               <div
                 key={b.code}
-                className="p-6 rounded-2xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-purple-300 dark:hover:border-purple-500/40 shadow-xs hover:shadow-md dark:shadow-none transition-all flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-[#106FE2]/40 shadow-xs hover:shadow-md dark:shadow-none transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center transition-colors">
                       <Icon className={`w-5 h-5 ${b.color}`} />
                     </div>
-                    <span className="text-xs font-black px-2.5 py-1 rounded-md bg-purple-100 text-purple-900 dark:bg-purple-950/70 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30 transition-colors">
+                    <span className="text-xs font-black px-2.5 py-1 rounded-md bg-blue-50 text-[#106FE2] dark:bg-blue-950/70 dark:text-blue-300 border border-blue-200 dark:border-[#106FE2]/30 transition-colors">
                       {b.code}
                     </span>
                   </div>
@@ -90,7 +90,7 @@ export function CurriculumSection() {
 
         {/* Disclaimer Note */}
         <div className="max-w-2xl mx-auto text-center p-3.5 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 flex items-center justify-center gap-2 transition-colors">
-          <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+          <ShieldCheck className="w-4 h-4 text-[#106FE2] flex-shrink-0" />
           <span>
             Curriculum names are used solely to indicate syllabus alignment. No official affiliation or endorsement is claimed.
           </span>

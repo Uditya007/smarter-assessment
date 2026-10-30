@@ -7,25 +7,25 @@ export function TrustValueSection() {
       title: "Personalized Practice",
       description: "Questions tailored to each student’s unique learning needs.",
       icon: Sliders,
-      color: "text-purple-600 dark:text-purple-400",
+      color: "text-[#106FE2]",
     },
     {
       title: "Instant Feedback",
       description: "Understand mistakes and learn the correct concepts immediately.",
       icon: Zap,
-      color: "text-sky-600 dark:text-sky-400",
+      color: "text-[#FE730A]",
     },
     {
       title: "Measurable Progress",
       description: "Track accuracy, study speed, and academic improvement.",
       icon: LineChart,
-      color: "text-emerald-600 dark:text-emerald-400",
+      color: "text-[#106FE2]",
     },
     {
       title: "Connected Learning",
       description: "Keep students, teachers, and parents aligned with shared insights.",
       icon: Users2,
-      color: "text-amber-600 dark:text-amber-400",
+      color: "text-[#FE730A]",
     },
   ];
 
@@ -38,7 +38,7 @@ export function TrustValueSection() {
             return (
               <div
                 key={idx}
-                className="p-5 rounded-xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 shadow-xs dark:shadow-none transition-all flex items-start gap-3.5"
+                className="p-5 rounded-xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-[#106FE2]/40 shadow-xs dark:shadow-none transition-all flex items-start gap-3.5"
               >
                 <div className="w-10 h-10 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center flex-shrink-0 transition-colors">
                   <Icon className={`w-5 h-5 ${prop.color}`} />

@@ -35,7 +35,7 @@ export function Logo({
   return (
     <Link
       href="#home"
-      className={`group inline-flex flex-col items-start justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-lg transition-transform duration-200 hover:opacity-95 ${className}`}
+      className={`group inline-flex flex-col items-start justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#106FE2] rounded-lg transition-transform duration-200 hover:opacity-95 ${className}`}
       aria-label="Smarter Assessment Home"
     >
       <div className="relative flex items-center">

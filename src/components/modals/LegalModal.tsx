@@ -22,7 +22,7 @@ export function LegalModal({ isOpen, type, onClose }: LegalModalProps) {
       body: (
         <div className="space-y-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
           <p>
-            At <strong>Smarter Assessment</strong>, protecting student privacy—especially regarding minors—is our foundational design principle. Our architectural standards enforce strict data minimization, cryptographic storage, and absolute isolation between institutional cohorts.
+            At <strong className="text-slate-900 dark:text-white">Smarter Assessment</strong>, protecting student privacy—especially regarding minors—is our foundational design principle. Our architectural standards enforce strict data minimization, cryptographic storage, and absolute isolation between institutional cohorts.
           </p>
 
           <h4 className="text-sm font-bold text-slate-900 dark:text-white pt-2">1. Role-Based Access Isolation</h4>
@@ -108,7 +108,7 @@ export function LegalModal({ isOpen, type, onClose }: LegalModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 dark:bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-purple-500/40 rounded-2xl shadow-2xl p-6 sm:p-8 overflow-hidden max-h-[85vh] flex flex-col transition-colors duration-200">
+      <div className="relative w-full max-w-2xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-[#106FE2]/30 rounded-2xl shadow-2xl p-6 sm:p-8 overflow-hidden max-h-[85vh] flex flex-col transition-colors duration-200">
         {/* Close Button */}
         <button
           type="button"
@@ -121,11 +121,11 @@ export function LegalModal({ isOpen, type, onClose }: LegalModalProps) {
 
         {/* Modal Header */}
         <div className="flex items-center gap-3 pb-4 mb-4 border-b border-slate-200 dark:border-slate-800 transition-colors">
-          <div className="w-10 h-10 rounded-xl bg-purple-100 dark:bg-purple-950/80 border border-purple-200 dark:border-purple-500/40 flex items-center justify-center text-purple-700 dark:text-purple-300 flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#106FE2]/10 border border-[#106FE2]/25 flex items-center justify-center text-[#106FE2] flex-shrink-0">
             <Icon className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#FE730A]">
               {current.badge}
             </span>
             <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white transition-colors">{current.title}</h3>
@@ -140,7 +140,7 @@ export function LegalModal({ isOpen, type, onClose }: LegalModalProps) {
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white dark:bg-slate-800 dark:hover:bg-slate-700 font-bold text-xs transition-colors shadow-xs"
+            className="px-5 py-2 rounded-xl bg-[#106FE2] hover:bg-[#0D5BC0] text-white font-bold text-xs transition-colors shadow-xs"
           >
             I Understand &amp; Close
           </button>

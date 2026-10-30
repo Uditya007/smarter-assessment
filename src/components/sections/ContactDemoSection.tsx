@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, Mail, MessageCircle, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { Phone, MessageCircle, Send, CheckCircle2, Loader2 } from "lucide-react";
 import confetti from "canvas-confetti";
 import { siteConfig } from "@/config/site.config";
 
@@ -41,7 +41,7 @@ export function ContactDemoSection() {
     <section id="contact" className="py-16 md:py-20 bg-white dark:bg-[#090D1E] border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Get in Touch</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#106FE2]">Get in Touch</span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 transition-colors">
             Let’s Build a Better Learning Experience
           </h2>
@@ -60,9 +60,9 @@ export function ContactDemoSection() {
                 </span>
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
-                  className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 inline-flex items-center gap-2 transition-colors"
+                  className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white hover:text-[#106FE2] inline-flex items-center gap-2 transition-colors"
                 >
-                  <Phone className="w-5 h-5 text-amber-500 dark:text-amber-400" />
+                  <Phone className="w-5 h-5 text-[#FE730A]" />
                   <span>{siteConfig.contact.displayPhone}</span>
                 </a>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
@@ -75,7 +75,7 @@ export function ContactDemoSection() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#106FE2] hover:bg-blue-700 text-white font-bold text-xs shadow-md shadow-[#106FE2]/20 transition-all"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Chat on WhatsApp</span>
@@ -96,14 +96,14 @@ export function ContactDemoSection() {
             <div className="lg:col-span-7 bg-white dark:bg-[#080B1A] p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors duration-200">
               {submitted ? (
                 <div className="py-6 text-center animate-in fade-in duration-200">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-950/40 text-[#106FE2] flex items-center justify-center mx-auto mb-3">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="text-base font-bold text-slate-900 dark:text-white mb-1">Inquiry Received</h4>
                   <p className="text-xs text-slate-600 dark:text-slate-300 max-w-sm mx-auto mb-3">
                     An educational coordinator will contact <strong className="text-slate-900 dark:text-white">{formData.phone}</strong> shortly.
                   </p>
-                  <span className="text-[11px] font-mono text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/60 px-3 py-1 rounded border border-purple-200 dark:border-purple-800">
+                  <span className="text-[11px] font-mono text-[#106FE2] dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 px-3 py-1 rounded border border-blue-200 dark:border-[#106FE2]/30">
                     Ref ID: {ticketId}
                   </span>
                 </div>
@@ -121,7 +121,7 @@ export function ContactDemoSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Ramesh Kumar"
-                      className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-[#106FE2] transition-colors"
                     />
                   </div>
 
@@ -136,7 +136,7 @@ export function ContactDemoSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 98765 43210"
-                        className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-[#106FE2] transition-colors"
                       />
                     </div>
                     <div>
@@ -148,7 +148,7 @@ export function ContactDemoSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="you@example.com"
-                        className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-[#106FE2] transition-colors"
                       />
                     </div>
                   </div>
@@ -162,14 +162,14 @@ export function ContactDemoSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="e.g. Parent of Class 9 student / School Coordinator"
-                      className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-[#106FE2] transition-colors"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-2.5 rounded-xl font-bold text-xs text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 shadow-md shadow-amber-400/20 flex items-center justify-center gap-1.5 transition-all disabled:opacity-50"
+                    className="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-[#FE730A] hover:bg-[#E56300] shadow-md shadow-[#FE730A]/25 flex items-center justify-center gap-1.5 transition-all disabled:opacity-50"
                   >
                     {loading ? (
                       <>
