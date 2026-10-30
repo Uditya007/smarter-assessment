@@ -32,8 +32,87 @@ export function Footer({
 
   return (
     <footer className="bg-slate-100 dark:bg-[#05070F] text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-[#106FE2]/20 text-xs transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 md:pt-16 md:pb-12">
+        {/* ======================================================== */}
+        {/* MOBILE VIEW (< md): Compact, Short & Straightforward     */}
+        {/* ======================================================== */}
+        <div className="md:hidden space-y-4 mb-6">
+          {/* Brand header */}
+          <div className="flex flex-col items-start gap-2">
+            <Logo size="md" withTagline={false} />
+            <p className="text-slate-600 dark:text-slate-400 text-xs">
+              Better Learning. Stronger Outcomes.
+            </p>
+          </div>
+
+          {/* Quick contact pill */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+            <a
+              href={`tel:${siteConfig.contact.phone}`}
+              className="inline-flex items-center gap-1.5 font-bold text-slate-900 dark:text-white hover:text-[#106FE2] transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#FE730A]" />
+              <span>{siteConfig.contact.displayPhone}</span>
+            </a>
+            <span className="text-slate-300 dark:text-slate-700">•</span>
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              className="text-slate-600 dark:text-slate-400 hover:text-[#106FE2] transition-colors"
+            >
+              {siteConfig.contact.email}
+            </a>
+          </div>
+
+          {/* Compact 2-column quick links */}
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs border-y border-slate-200 dark:border-slate-800/80 py-3.5">
+            <Link href="#features" className="hover:text-[#106FE2] transition-colors">
+              Core Features
+            </Link>
+            <Link href="#how-it-works" className="hover:text-[#106FE2] transition-colors">
+              How It Works
+            </Link>
+            <Link href="#pricing" className="hover:text-[#106FE2] transition-colors">
+              Pricing Plans
+            </Link>
+            <Link href="#faq" className="hover:text-[#106FE2] transition-colors">
+              FAQs
+            </Link>
+            <button
+              type="button"
+              onClick={onOpenPrivacy}
+              className="text-left hover:text-[#106FE2] transition-colors"
+            >
+              Privacy Policy
+            </button>
+            <button
+              type="button"
+              onClick={onOpenTerms}
+              className="text-left hover:text-[#106FE2] transition-colors"
+            >
+              Terms of Service
+            </button>
+            <button
+              type="button"
+              onClick={onOpenSafety}
+              className="text-left hover:text-[#106FE2] transition-colors flex items-center gap-1"
+            >
+              <ShieldCheck className="w-3 h-3 text-[#106FE2]" />
+              <span>Data Safety</span>
+            </button>
+            <button
+              type="button"
+              onClick={onBookDemo}
+              className="text-left text-[#FE730A] font-bold hover:text-[#E56300] transition-colors"
+            >
+              Book a Demo →
+            </button>
+          </div>
+        </div>
+
+        {/* ======================================================== */}
+        {/* DESKTOP VIEW (>= md): Full Comprehensive Multi-Column    */}
+        {/* ======================================================== */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Column 1: Brand & Mission */}
           <div className="lg:col-span-2 space-y-4">
             <Logo size="lg" withTagline={true} />
@@ -176,26 +255,25 @@ export function Footer({
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Actions */}
-        <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs transition-colors">
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <p className="text-slate-500 dark:text-slate-400">
-              © {currentYear} Smarter Assessment. Better Learning. Stronger Outcomes. All rights reserved.
-            </p>
-          </div>
+        {/* ======================================================== */}
+        {/* Bottom Bar: Copyright, Theme Switcher & Back to Top     */}
+        {/* ======================================================== */}
+        <div className="pt-4 md:pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs transition-colors">
+          <p className="text-slate-500 dark:text-slate-400 text-center sm:text-left">
+            © {currentYear} Smarter Assessment. All rights reserved.
+          </p>
 
-          <div className="flex items-center gap-3">
-            {/* Quick Theme Switcher in Footer */}
+          <div className="flex items-center gap-2.5">
             <ThemeToggle showLabel={true} />
 
             <button
               type="button"
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-[#106FE2] hover:border-[#106FE2]/40 shadow-xs transition-colors"
+              className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-[#106FE2] hover:border-[#106FE2]/40 shadow-xs transition-colors text-xs"
               aria-label="Back to top"
             >
               <span>Back to Top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
+              <ArrowUp className="w-3 h-3 text-[#106FE2]" />
             </button>
           </div>
         </div>
