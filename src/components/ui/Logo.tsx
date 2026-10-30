@@ -4,7 +4,7 @@ import Link from "next/link";
 interface LogoProps {
   className?: string;
   size?: "sm" | "md" | "lg" | "xl";
-  variant?: "dark" | "light" | "official";
+  variant?: "auto" | "dark" | "light" | "official";
   withTagline?: boolean;
 }
 
@@ -15,7 +15,7 @@ const BLUE_PATH = "M 668 40.717 C 664.425 42.108, 654.975 45.716, 647 48.734 C 6
 export function Logo({
   className = "",
   size = "md",
-  variant = "dark",
+  variant = "auto",
   withTagline = false,
 }: LogoProps) {
   // Height & dimensions matching the 3:1 aspect ratio of the official Smarter Assessment logo
@@ -26,8 +26,11 @@ export function Logo({
     xl: "h-16 w-[192px] sm:h-20 sm:w-[240px]",
   };
 
-  // Navy in official/light mode, Crisp White in dark mode
-  const textFill = variant === "dark" ? "#FFFFFF" : "#071A31";
+  const getDarkPathClass = () => {
+    if (variant === "dark") return "fill-white";
+    if (variant === "light" || variant === "official") return "fill-[#071A31]";
+    return "fill-[#071A31] dark:fill-white transition-colors duration-200";
+  };
 
   return (
     <Link
@@ -45,7 +48,7 @@ export function Logo({
             aria-hidden="true"
           >
             {/* 'Sm' and 'rter' */}
-            <path d={DARK_PATH} fill={textFill} />
+            <path d={DARK_PATH} className={getDarkPathClass()} />
             {/* Orange Triangular 'A' */}
             <path d={ORANGE_PATH} fill="#FE730A" />
             {/* Growth Arrow & 'Assessment' */}
@@ -55,7 +58,7 @@ export function Logo({
       </div>
 
       {withTagline && (
-        <span className="text-[11px] font-medium text-slate-400 tracking-wide mt-1 pl-0.5">
+        <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400 tracking-wide mt-1 pl-0.5 transition-colors duration-200">
           Better Learning. Stronger Outcomes.
         </span>
       )}

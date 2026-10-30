@@ -8,40 +8,40 @@ export function HowItWorksSection() {
       title: "Assess",
       desc: "Students take chapter-wise quizzes or mock tests aligned with CBSE, ICSE, or IGCSE.",
       icon: BookCheck,
-      color: "text-purple-400",
+      color: "text-purple-600 dark:text-purple-400",
     },
     {
       num: "02",
       title: "Analyze",
       desc: "AI evaluates answers instantaneously, pinpointing knowledge gaps and misconceptions.",
       icon: Cpu,
-      color: "text-sky-400",
+      color: "text-sky-600 dark:text-sky-400",
     },
     {
       num: "03",
       title: "Improve",
       desc: "Receive step-by-step reasoning explanations and targeted remedial practice drills.",
       icon: Sparkles,
-      color: "text-amber-400",
+      color: "text-amber-600 dark:text-amber-400",
     },
     {
       num: "04",
       title: "Track Progress",
       desc: "Students, teachers, and parents review real-time mastery growth and progress reports.",
       icon: TrendingUp,
-      color: "text-emerald-400",
+      color: "text-emerald-600 dark:text-emerald-400",
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-16 md:py-20 bg-[#070913]">
+    <section id="how-it-works" className="py-16 md:py-20 bg-white dark:bg-[#070913] transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-purple-400">The Smarter Learning Loop</span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">The Smarter Learning Loop</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-1 transition-colors">
             How It Works
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 transition-colors">
             A simple, intelligent four-step cycle that turns everyday assessment into measurable academic growth.
           </p>
         </div>
@@ -52,17 +52,17 @@ export function HowItWorksSection() {
             return (
               <div
                 key={st.num}
-                className="p-6 rounded-2xl bg-[#0D1226] border border-slate-800 hover:border-purple-500/40 transition-colors flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-purple-400 dark:hover:border-purple-500/40 shadow-xs dark:shadow-none transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold text-slate-500">STEP {st.num}</span>
-                    <div className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center">
+                    <span className="text-xs font-mono font-bold text-slate-400 dark:text-slate-500">STEP {st.num}</span>
+                    <div className="w-9 h-9 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center transition-colors">
                       <Icon className={`w-4 h-4 ${st.color}`} />
                     </div>
                   </div>
-                  <h3 className="text-base font-bold text-white mb-2">{st.title}</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed">{st.desc}</p>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2 transition-colors">{st.title}</h3>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed transition-colors">{st.desc}</p>
                 </div>
               </div>
             );

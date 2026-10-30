@@ -46,42 +46,42 @@ export function InteractiveDashboardPreview() {
   ] as const;
 
   return (
-    <section id="demo-preview" className="py-24 bg-[#060812] border-t border-slate-800/80 relative overflow-hidden">
+    <section id="demo-preview" className="py-24 bg-slate-100/70 dark:bg-[#060812] border-t border-slate-200 dark:border-slate-800/80 relative overflow-hidden transition-colors duration-200">
       {/* Background Lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-96 bg-purple-900/10 blur-[150px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-96 bg-purple-500/10 dark:bg-purple-900/10 blur-[150px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-950/70 border border-purple-500/40 text-purple-300 text-xs font-semibold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-950/70 border border-purple-300 dark:border-purple-500/40 text-purple-900 dark:text-purple-300 text-xs font-semibold mb-3 transition-colors">
+            <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-300" />
             <span>Interactive SaaS Interface Walkthrough</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors">
             Experience the Smarter Assessment Platform
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed transition-colors">
             Click through real product workflows below. Designed for speed, clarity, and instant diagnostic feedback.
           </p>
         </div>
 
         {/* Demo Disclaimer & Perspective Switcher Bar */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-3 rounded-2xl bg-[#0D1226] border border-slate-800 mb-6">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-3 rounded-2xl bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none mb-6 transition-colors">
           <div className="flex items-center justify-between sm:justify-start gap-2">
-            <span className="px-2.5 py-1 rounded-full bg-amber-950/70 text-amber-300 border border-amber-600/40 text-[11px] font-bold">
+            <span className="px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-600/40 text-[11px] font-bold">
               Demonstration Mode
             </span>
-            <span className="text-xs text-slate-400 hidden sm:inline">
+            <span className="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">
               Sample academic data for demonstration only.
             </span>
-            <span className="text-[10px] text-slate-500 sm:hidden">
+            <span className="text-[10px] text-slate-400 sm:hidden">
               Sample Data
             </span>
           </div>
 
           {/* Perspective Pills */}
-          <div className="flex items-center justify-between gap-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800">
-            <span className="text-[11px] text-slate-400 font-semibold px-2 hidden sm:inline">Role:</span>
+          <div className="flex items-center justify-between gap-1 bg-slate-100 dark:bg-slate-900/90 p-1 rounded-xl border border-slate-200 dark:border-slate-800 transition-colors">
+            <span className="text-[11px] text-slate-500 dark:text-slate-400 font-semibold px-2 hidden sm:inline">Role:</span>
             <button
               type="button"
               onClick={() => {

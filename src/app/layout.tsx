@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -47,9 +48,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-[#070913] text-slate-100 font-sans selection:bg-purple-600 selection:text-white antialiased">
-        {children}
+    <html lang="en" className={`${plusJakarta.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070913] dark:text-slate-100 font-sans selection:bg-purple-600 selection:text-white antialiased transition-colors duration-200">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

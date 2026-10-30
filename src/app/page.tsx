@@ -62,7 +62,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070913] text-slate-100 flex flex-col selection:bg-purple-600 selection:text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070913] dark:text-slate-100 flex flex-col selection:bg-purple-600 selection:text-white transition-colors duration-200">
       {/* 1. Website Header with Sticky Navigation */}
       <Navbar onOpenDemo={handleOpenDemo} onOpenLogin={handleOpenLogin} />
 
