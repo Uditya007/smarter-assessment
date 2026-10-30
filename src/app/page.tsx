@@ -8,11 +8,9 @@ import { TrustValueSection } from "@/components/sections/TrustValueSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { PersonaSections } from "@/components/sections/PersonaSections";
-import { SchoolSolutionsSection } from "@/components/sections/SchoolSolutionsSection";
 import { CurriculumSection } from "@/components/sections/CurriculumSection";
 import { InteractiveDashboardPreview } from "@/components/sections/InteractiveDashboardPreview";
 import { PricingSection } from "@/components/sections/PricingSection";
-import { PrinciplesSection } from "@/components/sections/PrinciplesSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { ContactDemoSection } from "@/components/sections/ContactDemoSection";
 
@@ -50,19 +48,9 @@ export default function HomePage() {
   };
 
   const handleLoginSuccess = (role: UserRole) => {
-    // Scroll to interactive dashboard preview
     const el = document.getElementById("demo-preview");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleScrollToSchoolDemo = () => {
-    const el = document.getElementById("schools");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    } else {
-      setIsDemoModalOpen(true);
     }
   };
 
@@ -85,48 +73,41 @@ export default function HomePage() {
           onBookDemo={handleOpenDemo}
         />
 
-        {/* 3. Trust & Value Proposition */}
+        {/* 3. Value Proposition Strip */}
         <TrustValueSection />
 
-        {/* 4. How It Works (Interactive 4-Step Process) */}
-        <HowItWorksSection />
-
-        {/* 5. Core Platform Features (6 Capabilities Grid) */}
+        {/* 4. Core Capabilities (6 Features Grid) */}
         <FeaturesSection />
 
-        {/* 6. Dedicated Sections for Students, Teachers, and Parents */}
+        {/* 5. Built for Everyone (4 Roles: Students, Teachers, Parents, Schools) */}
         <PersonaSections
-          onExploreStudents={() => handleScrollToSection("demo-preview")}
-          onExploreTeachers={() => handleScrollToSection("demo-preview")}
-          onExploreParents={() => handleScrollToSection("demo-preview")}
+          onOpenDemo={handleOpenDemo}
+          onOpenTrial={() => handleStartTrial("15-Day Subject Trial")}
         />
 
-        {/* 7. School & Institutional Solutions + Embedded Lead Form */}
-        <SchoolSolutionsSection onBookDemoClick={handleOpenDemo} />
+        {/* 6. How It Works (The 4-Step Learning Loop) */}
+        <HowItWorksSection />
 
-        {/* 8. Curriculum Alignment (CBSE, ICSE, IGCSE) */}
+        {/* 7. Curriculum Alignment (CBSE, ICSE, IGCSE) */}
         <CurriculumSection />
 
-        {/* 9. Interactive Product Dashboard Preview (Functional SaaS preview) */}
+        {/* 8. Interactive Product Dashboard Preview */}
         <InteractiveDashboardPreview />
 
-        {/* 10. Pricing Section */}
+        {/* 9. Pricing Section */}
         <PricingSection
           onSelectPlan={handleSelectPlan}
-          onContactSchool={handleScrollToSchoolDemo}
+          onContactSchool={handleOpenDemo}
         />
 
-        {/* 11. Principles Section ("Designed Around Better Learning") */}
-        <PrinciplesSection />
-
-        {/* 12. FAQ Section (12 Detailed Questions Accordion) */}
+        {/* 10. FAQ Accordion */}
         <FaqSection />
 
-        {/* 13. Contact & Direct Inquiries Section */}
+        {/* 11. Contact & Demonstration Booking */}
         <ContactDemoSection />
       </main>
 
-      {/* 14. Comprehensive Multi-Column Footer */}
+      {/* 12. Footer */}
       <Footer
         onOpenPrivacy={() => setLegalModalType("privacy")}
         onOpenTerms={() => setLegalModalType("terms")}

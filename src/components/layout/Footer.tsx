@@ -105,22 +105,22 @@ export function Footer({
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Stakeholder Solutions</h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="#students" className="hover:text-white transition-colors">
+                <Link href="#stakeholders" className="hover:text-white transition-colors">
                   For Students (CBSE / ICSE / IGCSE)
                 </Link>
               </li>
               <li>
-                <Link href="#teachers" className="hover:text-white transition-colors">
+                <Link href="#stakeholders" className="hover:text-white transition-colors">
                   For Teachers &amp; Faculty
                 </Link>
               </li>
               <li>
-                <Link href="#parents" className="hover:text-white transition-colors">
+                <Link href="#stakeholders" className="hover:text-white transition-colors">
                   For Parents &amp; Families
                 </Link>
               </li>
               <li>
-                <Link href="#schools" className="hover:text-white transition-colors">
+                <Link href="#stakeholders" className="hover:text-white transition-colors">
                   For Schools &amp; Institutions
                 </Link>
               </li>
