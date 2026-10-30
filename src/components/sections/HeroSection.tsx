@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import Image from "next/image";
 import { Sparkles, ArrowRight, Zap, Target, TrendingUp, CheckCircle2 } from "lucide-react";
 
 interface HeroSectionProps {
@@ -9,8 +10,6 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ onStartTrial, onBookDemo }: HeroSectionProps) {
-  const [activeTab, setActiveTab] = useState<"math" | "science">("math");
-
   return (
     <section id="home" className="relative pt-6 pb-16 md:pt-14 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100/60 dark:from-[#070913] dark:via-[#0A0E22] dark:to-[#070913] transition-colors duration-200">
       {/* Background Glow (Brand Blue & Subtle Orange) */}
@@ -87,87 +86,62 @@ export function HeroSection({ onStartTrial, onBookDemo }: HeroSectionProps) {
             </div>
           </div>
 
-          {/* Right Column: Clean Product Visualization */}
+          {/* Right Column: Real Product Showcase with Student in Action */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#106FE2] to-[#FE730A] rounded-3xl blur-lg opacity-20 dark:opacity-25" />
+              {/* Ambient Glow */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#106FE2] to-[#FE730A] rounded-3xl blur-xl opacity-25 dark:opacity-35" />
 
-              <div className="relative bg-white dark:bg-[#0E1324] border border-slate-200 dark:border-[#106FE2]/30 rounded-2xl p-4 sm:p-5 shadow-xl dark:shadow-2xl backdrop-blur-xl transition-colors duration-200">
-                {/* Header */}
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-200 dark:border-slate-800 text-xs">
-                  <div className="flex items-center gap-2">
+              {/* Card Container */}
+              <div className="relative bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-[#106FE2]/30 rounded-3xl p-3 sm:p-3.5 shadow-2xl overflow-hidden transition-colors duration-200">
+                {/* Real Student Photograph */}
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/11]">
+                  <Image
+                    src="/images/student-learning-app.jpg"
+                    alt="Student using Smarter Assessment diagnostic practice app on mobile"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                    className="object-cover object-center transition-transform duration-500 hover:scale-[1.02]"
+                  />
+
+                  {/* Subtle Dark Vignette at bottom for badge legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
+
+                  {/* Top-Left Floating Badge */}
+                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 dark:bg-[#070913]/90 backdrop-blur-md border border-slate-200/80 dark:border-[#106FE2]/40 shadow-lg text-xs">
                     <span className="w-2 h-2 rounded-full bg-[#FE730A] animate-pulse" />
                     <span className="font-bold text-slate-900 dark:text-white">Live Diagnostic Session</span>
-                  </div>
-                  <span className="text-[11px] font-medium text-[#106FE2] bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded border border-blue-200 dark:border-[#106FE2]/30">
-                    CBSE Class 10
-                  </span>
-                </div>
-
-                {/* Subject Selector Tabs */}
-                <div className="flex gap-2 mb-3">
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab("math")}
-                    className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-                      activeTab === "math"
-                        ? "bg-[#106FE2] text-white"
-                        : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
-                    }`}
-                  >
-                    Mathematics
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab("science")}
-                    className={`flex-1 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-                      activeTab === "science"
-                        ? "bg-[#106FE2] text-white"
-                        : "bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
-                    }`}
-                  >
-                    Science
-                  </button>
-                </div>
-
-                {/* Score & Progress Metric */}
-                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 mb-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
-                      {activeTab === "math" ? "Quadratic Equations Mastery" : "Chemical Reactions & Equations"}
-                    </span>
-                    <span className="text-xs font-extrabold text-[#106FE2]">
-                      {activeTab === "math" ? "92% Accuracy" : "88% Accuracy"}
+                    <span className="text-[10px] font-semibold text-[#106FE2] bg-blue-50 dark:bg-blue-950/70 px-1.5 py-0.5 rounded border border-blue-200 dark:border-[#106FE2]/30">
+                      CBSE Grade 5
                     </span>
                   </div>
-                  <div className="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-[#106FE2] to-[#FE730A] rounded-full"
-                      style={{ width: activeTab === "math" ? "92%" : "88%" }}
-                    />
-                  </div>
-                </div>
 
-                {/* AI Instant Feedback Snippet */}
-                <div className="p-3 rounded-xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-200 dark:border-[#106FE2]/30 text-xs">
-                  <div className="flex items-center gap-1.5 font-bold text-[#106FE2] dark:text-blue-300 mb-1">
+                  {/* Bottom-Right Floating Glass Badge */}
+                  <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 flex items-center gap-2.5 px-3 py-2 rounded-xl bg-white/95 dark:bg-[#070913]/90 backdrop-blur-md border border-slate-200/80 dark:border-[#106FE2]/40 shadow-xl text-xs">
+                    <div className="w-8 h-8 rounded-lg bg-[#106FE2] text-white flex items-center justify-center font-black text-xs shadow-xs">
+                      94%
+                    </div>
+                    <div className="text-left">
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Concept Mastery</div>
+                      <div className="text-xs font-bold text-slate-900 dark:text-white">Instant AI Feedback</div>
+                    </div>
+                  </div>
+
+                  {/* Bottom-Left Floating Pill */}
+                  <div className="hidden sm:flex absolute bottom-4 left-4 z-10 items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">
                     <Sparkles className="w-3.5 h-3.5 text-[#FE730A]" />
-                    <span>AI Diagnostic Feedback</span>
+                    <span>Interactive Student Portal</span>
                   </div>
-                  <p className="text-slate-700 dark:text-slate-300 text-[11px] leading-relaxed">
-                    {activeTab === "math"
-                      ? "Great work on discriminant calculations. Next step: practice word problems involving projectile motion."
-                      : "Strong command of balancing redox reactions. Recommended: 5-question drill on exothermic energy diagrams."}
-                  </p>
                 </div>
 
-                {/* Real-time sync badge */}
-                <div className="flex items-center justify-between pt-3 mt-3 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400">
-                  <span className="flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3 text-[#106FE2]" />
-                    Teacher &amp; Parent synced
+                {/* Under-Image Micro Bar */}
+                <div className="mt-3 px-2 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
+                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#106FE2]" />
+                    Adaptive quizzes on phone, tablet &amp; web
                   </span>
-                  <span>Instant evaluation</span>
+                  <span className="text-[11px] font-bold text-[#FE730A]">CBSE • ICSE • IGCSE</span>
                 </div>
               </div>
             </div>

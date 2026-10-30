@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { GraduationCap, Users, Heart, School, CheckCircle2, ArrowRight } from "lucide-react";
 
 interface PersonaSectionsProps {
@@ -171,6 +172,23 @@ export function PersonaSections({ onOpenDemo, onOpenTrial }: PersonaSectionsProp
 
             {/* Right Column: Key Stats Card */}
             <div className="md:col-span-5 bg-slate-50 dark:bg-[#090D1C] rounded-xl border border-slate-200 dark:border-slate-800 p-5 space-y-3 transition-colors">
+              {activeTab === "students" && (
+                <div className="relative rounded-lg overflow-hidden aspect-[16/10] border border-slate-200 dark:border-slate-800 shadow-xs mb-2">
+                  <Image
+                    src="/images/student-learning-app.jpg"
+                    alt="Student using Smarter Assessment diagnostic practice app"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 30vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-white text-[11px] font-semibold">
+                    <span>Student Experience</span>
+                    <span className="text-[#FE730A]">CBSE Grade 5 Math</span>
+                  </div>
+                </div>
+              )}
+
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-1">
                 Role Highlights
               </span>
