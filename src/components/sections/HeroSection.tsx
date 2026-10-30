@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Sparkles, ArrowRight, Zap, Target, TrendingUp, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Zap, Target, TrendingUp } from "lucide-react";
 
 interface HeroSectionProps {
   onStartTrial: () => void;
@@ -86,63 +86,18 @@ export function HeroSection({ onStartTrial, onBookDemo }: HeroSectionProps) {
             </div>
           </div>
 
-          {/* Right Column: Real Product Showcase with Student in Action */}
+          {/* Right Column: Clean Product Photo */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Ambient Glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#106FE2] to-[#FE730A] rounded-3xl blur-xl opacity-25 dark:opacity-35" />
-
-              {/* Card Container */}
-              <div className="relative bg-white dark:bg-[#0D1226] border border-slate-200 dark:border-[#106FE2]/30 rounded-3xl p-3 sm:p-3.5 shadow-2xl overflow-hidden transition-colors duration-200">
-                {/* Real Student Photograph */}
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/11]">
-                  <Image
-                    src="/images/student-learning-app.jpg"
-                    alt="Student using Smarter Assessment diagnostic practice app on mobile"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                    className="object-cover object-center transition-transform duration-500 hover:scale-[1.02]"
-                  />
-
-                  {/* Subtle Dark Vignette at bottom for badge legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
-
-                  {/* Top-Left Floating Badge */}
-                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/95 dark:bg-[#070913]/90 backdrop-blur-md border border-slate-200/80 dark:border-[#106FE2]/40 shadow-lg text-xs">
-                    <span className="w-2 h-2 rounded-full bg-[#FE730A] animate-pulse" />
-                    <span className="font-bold text-slate-900 dark:text-white">Live Diagnostic Session</span>
-                    <span className="text-[10px] font-semibold text-[#106FE2] bg-blue-50 dark:bg-blue-950/70 px-1.5 py-0.5 rounded border border-blue-200 dark:border-[#106FE2]/30">
-                      CBSE Grade 5
-                    </span>
-                  </div>
-
-                  {/* Bottom-Right Floating Glass Badge */}
-                  <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 flex items-center gap-2.5 px-3 py-2 rounded-xl bg-white/95 dark:bg-[#070913]/90 backdrop-blur-md border border-slate-200/80 dark:border-[#106FE2]/40 shadow-xl text-xs">
-                    <div className="w-8 h-8 rounded-lg bg-[#106FE2] text-white flex items-center justify-center font-black text-xs shadow-xs">
-                      94%
-                    </div>
-                    <div className="text-left">
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Concept Mastery</div>
-                      <div className="text-xs font-bold text-slate-900 dark:text-white">Instant AI Feedback</div>
-                    </div>
-                  </div>
-
-                  {/* Bottom-Left Floating Pill */}
-                  <div className="hidden sm:flex absolute bottom-4 left-4 z-10 items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-semibold">
-                    <Sparkles className="w-3.5 h-3.5 text-[#FE730A]" />
-                    <span>Interactive Student Portal</span>
-                  </div>
-                </div>
-
-                {/* Under-Image Micro Bar */}
-                <div className="mt-3 px-2 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
-                  <span className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#106FE2]" />
-                    Adaptive quizzes on phone, tablet &amp; web
-                  </span>
-                  <span className="text-[11px] font-bold text-[#FE730A]">CBSE • ICSE • IGCSE</span>
-                </div>
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-[#106FE2]/25">
+                <Image
+                  src="/images/student-learning-app.jpg"
+                  alt="Student using Smarter Assessment diagnostic practice app"
+                  width={1000}
+                  height={667}
+                  priority
+                  className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl"
+                />
               </div>
             </div>
           </div>

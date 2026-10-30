@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { BookCheck, Cpu, Sparkles, TrendingUp } from "lucide-react";
 
 export function HowItWorksSection() {
@@ -46,27 +47,45 @@ export function HowItWorksSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {steps.map((st) => {
-            const Icon = st.icon;
-            return (
-              <div
-                key={st.num}
-                className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-[#106FE2]/40 shadow-xs dark:shadow-none transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold text-slate-400 dark:text-slate-500">STEP {st.num}</span>
-                    <div className="w-9 h-9 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center transition-colors">
-                      <Icon className={`w-4 h-4 ${st.color}`} />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* Left: 4 Steps (2x2 grid) */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {steps.map((st) => {
+              const Icon = st.icon;
+              return (
+                <div
+                  key={st.num}
+                  className="p-5 sm:p-6 rounded-2xl bg-slate-50 dark:bg-[#0D1226] border border-slate-200 dark:border-slate-800 hover:border-[#106FE2]/40 shadow-xs dark:shadow-none transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3.5">
+                      <span className="text-xs font-mono font-bold text-slate-400 dark:text-slate-500">STEP {st.num}</span>
+                      <div className="w-8 h-8 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center transition-colors">
+                        <Icon className={`w-4 h-4 ${st.color}`} />
+                      </div>
                     </div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white mb-1.5 transition-colors">{st.title}</h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed transition-colors">{st.desc}</p>
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2 transition-colors">{st.title}</h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed transition-colors">{st.desc}</p>
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Right: Clean Product Photo with Phone */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-[#106FE2]/25">
+                <Image
+                  src="/images/smarter-app-phone.jpg"
+                  alt="Smarter Assessment mobile learning platform"
+                  width={1000}
+                  height={667}
+                  className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl"
+                />
               </div>
-            );
-          })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
