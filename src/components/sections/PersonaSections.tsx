@@ -109,7 +109,7 @@ export function PersonaSections({
             <div className="lg:col-span-6">
               <div className="bg-[#0E1325] border border-purple-500/30 rounded-2xl p-5 sm:p-6 shadow-2xl relative">
                 {/* Header */}
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+                <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-800">
                   <div>
                     <div className="text-[11px] font-bold uppercase tracking-wider text-purple-400">
                       Student Dashboard Mockup
@@ -269,7 +269,7 @@ export function PersonaSections({
             <div className="lg:col-span-6 order-2 lg:order-1">
               <div className="bg-[#0D1226] border border-sky-500/30 rounded-2xl p-5 sm:p-6 shadow-2xl relative">
                 {/* Header */}
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+                <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pb-4 mb-4 border-b border-slate-800">
                   <div>
                     <div className="text-[11px] font-bold uppercase tracking-wider text-sky-400">
                       Teacher Gradebook &amp; Analytics
@@ -282,73 +282,75 @@ export function PersonaSections({
                 </div>
 
                 {/* Score Distribution & Class Metrics */}
-                <div className="grid grid-cols-3 gap-2.5 mb-4">
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
-                    <span className="text-[10px] text-slate-400 block">Class Average</span>
-                    <span className="text-lg font-black text-white">82.4%</span>
-                    <span className="text-[10px] text-emerald-400 font-bold block">+3.1% vs term</span>
+                <div className="grid grid-cols-3 gap-2 sm:gap-2.5 mb-4">
+                  <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <span className="text-[9px] sm:text-[10px] text-slate-400 block truncate">Class Average</span>
+                    <span className="text-base sm:text-lg font-black text-white">82.4%</span>
+                    <span className="text-[9px] sm:text-[10px] text-emerald-400 font-bold block truncate">+3.1% term</span>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
-                    <span className="text-[10px] text-slate-400 block">Assessments Done</span>
-                    <span className="text-lg font-black text-sky-400">14 Tests</span>
-                    <span className="text-[10px] text-slate-400 block">100% Auto-Marked</span>
+                  <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <span className="text-[9px] sm:text-[10px] text-slate-400 block truncate">Assessments</span>
+                    <span className="text-base sm:text-lg font-black text-sky-400">14 Tests</span>
+                    <span className="text-[9px] sm:text-[10px] text-slate-400 block truncate">100% Auto</span>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
-                    <span className="text-[10px] text-slate-400 block">Needs Support</span>
-                    <span className="text-lg font-black text-amber-400">5 Students</span>
-                    <span className="text-[10px] text-amber-300 font-bold block">Alert generated</span>
+                  <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                    <span className="text-[9px] sm:text-[10px] text-slate-400 block truncate">Needs Help</span>
+                    <span className="text-base sm:text-lg font-black text-amber-400">5 Students</span>
+                    <span className="text-[9px] sm:text-[10px] text-amber-300 font-bold block truncate">Alerts active</span>
                   </div>
                 </div>
 
                 {/* Class Performance Table Mockup */}
-                <div className="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden mb-4">
-                  <div className="px-3.5 py-2.5 bg-slate-800/60 border-b border-slate-800 flex justify-between text-[11px] font-bold text-slate-300">
-                    <span>Student Name</span>
-                    <div className="flex gap-8">
-                      <span>Accuracy</span>
-                      <span>Status</span>
-                    </div>
-                  </div>
-
-                  <div className="divide-y divide-slate-800/80 text-xs">
-                    <div className="px-3.5 py-2.5 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="w-6 h-6 rounded-full bg-purple-900/60 text-purple-300 font-bold text-[10px] flex items-center justify-center">
-                          AK
-                        </span>
-                        <span className="text-slate-200 font-medium">Ananya Kumar</span>
-                      </div>
-                      <div className="flex items-center gap-8">
-                        <span className="text-emerald-400 font-bold">96%</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300">Top Tier</span>
+                <div className="bg-slate-900/90 rounded-xl border border-slate-800 overflow-x-auto mb-4">
+                  <div className="min-w-[280px]">
+                    <div className="px-3.5 py-2.5 bg-slate-800/60 border-b border-slate-800 flex justify-between text-[11px] font-bold text-slate-300">
+                      <span>Student Name</span>
+                      <div className="flex gap-6 sm:gap-8">
+                        <span>Accuracy</span>
+                        <span>Status</span>
                       </div>
                     </div>
 
-                    <div className="px-3.5 py-2.5 flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="w-6 h-6 rounded-full bg-sky-900/60 text-sky-300 font-bold text-[10px] flex items-center justify-center">
-                          RS
-                        </span>
-                        <span className="text-slate-200 font-medium">Rohit Sharma</span>
+                    <div className="divide-y divide-slate-800/80 text-xs">
+                      <div className="px-3.5 py-2.5 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-purple-900/60 text-purple-300 font-bold text-[10px] flex items-center justify-center flex-shrink-0">
+                            AK
+                          </span>
+                          <span className="text-slate-200 font-medium truncate max-w-[120px] sm:max-w-none">Ananya Kumar</span>
+                        </div>
+                        <div className="flex items-center gap-6 sm:gap-8 flex-shrink-0">
+                          <span className="text-emerald-400 font-bold">96%</span>
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300">Top Tier</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-8">
-                        <span className="text-sky-400 font-bold">91%</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded bg-sky-950 text-sky-300">Proficient</span>
-                      </div>
-                    </div>
 
-                    <div className="px-3.5 py-2.5 flex items-center justify-between bg-amber-950/20">
-                      <div className="flex items-center gap-2">
-                        <span className="w-6 h-6 rounded-full bg-amber-900/60 text-amber-300 font-bold text-[10px] flex items-center justify-center">
-                          VS
-                        </span>
-                        <span className="text-slate-200 font-medium">Vikram Singh</span>
+                      <div className="px-3.5 py-2.5 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-sky-900/60 text-sky-300 font-bold text-[10px] flex items-center justify-center flex-shrink-0">
+                            RS
+                          </span>
+                          <span className="text-slate-200 font-medium truncate max-w-[120px] sm:max-w-none">Rohit Sharma</span>
+                        </div>
+                        <div className="flex items-center gap-6 sm:gap-8 flex-shrink-0">
+                          <span className="text-sky-400 font-bold">91%</span>
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-sky-950 text-sky-300">Proficient</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-8">
-                        <span className="text-amber-400 font-bold">64%</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded bg-amber-950 text-amber-300 flex items-center gap-1">
-                          <AlertCircle className="w-2.5 h-2.5" /> Needs Remediation
-                        </span>
+
+                      <div className="px-3.5 py-2.5 flex items-center justify-between bg-amber-950/20">
+                        <div className="flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-amber-900/60 text-amber-300 font-bold text-[10px] flex items-center justify-center flex-shrink-0">
+                            VS
+                          </span>
+                          <span className="text-slate-200 font-medium truncate max-w-[120px] sm:max-w-none">Vikram Singh</span>
+                        </div>
+                        <div className="flex items-center gap-6 sm:gap-8 flex-shrink-0">
+                          <span className="text-amber-400 font-bold">64%</span>
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-amber-950 text-amber-300 flex items-center gap-1">
+                            <AlertCircle className="w-2.5 h-2.5" /> Needs Remediation
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>

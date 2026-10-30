@@ -156,51 +156,60 @@ export function Navbar({ onOpenDemo, onOpenLogin }: NavbarProps) {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#0A0D1B]/98 border-b border-purple-900/50 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-2 duration-200">
-            <div className="flex flex-col space-y-1.5">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-3 py-2.5 rounded-lg text-sm font-semibold text-slate-200 hover:text-white hover:bg-purple-950/40 border border-transparent hover:border-purple-800/40 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+          <>
+            {/* Backdrop overlay */}
+            <div
+              className="fixed inset-0 top-[60px] bg-black/60 backdrop-blur-sm -z-10 lg:hidden animate-in fade-in duration-200"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-hidden="true"
+            />
+            <div className="lg:hidden bg-[#0A0D1B]/98 border-b border-purple-900/50 backdrop-blur-xl px-4 pt-3 pb-6 animate-in slide-in-from-top-2 duration-200 max-h-[calc(100vh-80px)] overflow-y-auto shadow-2xl">
+              <div className="flex flex-col space-y-1">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="px-3.5 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:text-white hover:bg-purple-950/40 border border-transparent hover:border-purple-800/40 active:bg-purple-900/60 transition-colors flex items-center justify-between"
+                  >
+                    <span>{link.label}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-purple-400 opacity-60" />
+                  </Link>
+                ))}
 
-              <div className="pt-4 border-t border-slate-800/80 flex flex-col gap-2.5">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    onOpenLogin();
-                  }}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-200 bg-slate-900 border border-slate-700/80"
-                >
-                  <UserCircle className="w-4 h-4 text-purple-400" />
-                  <span>Log In to Portal</span>
-                </button>
+                <div className="pt-4 border-t border-slate-800/80 flex flex-col gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      onOpenLogin();
+                    }}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 bg-slate-900 border border-slate-700/80 active:scale-[0.99] transition-transform"
+                  >
+                    <UserCircle className="w-4 h-4 text-purple-400" />
+                    <span>Log In to Portal</span>
+                  </button>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    onOpenDemo();
-                  }}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-400 shadow-md"
-                >
-                  <span>Book a School Demo</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      onOpenDemo();
+                    }}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-amber-400 to-yellow-400 shadow-md active:scale-[0.99] transition-transform"
+                  >
+                    <span>Book a School Demo</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
 
-                <div className="pt-2 text-center text-xs text-slate-400 flex items-center justify-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-sky-400" />
-                  <span>Direct Advisor: {siteConfig.contact.displayPhone}</span>
+                  <div className="pt-2 text-center text-xs text-slate-400 flex items-center justify-center gap-2">
+                    <Phone className="w-3.5 h-3.5 text-sky-400" />
+                    <span>Advisory: <strong className="text-white">{siteConfig.contact.displayPhone}</strong></span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </>
         )}
       </header>
     </>

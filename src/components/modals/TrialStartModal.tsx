@@ -114,7 +114,7 @@ export function TrialStartModal({ isOpen, onClose, defaultPlanName = "15-Day Sub
                 value={formData.parentStudentName}
                 onChange={(e) => setFormData({ ...formData, parentStudentName: e.target.value })}
                 placeholder="e.g. Rohit Sharma"
-                className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
               />
             </div>
 
@@ -129,7 +129,7 @@ export function TrialStartModal({ isOpen, onClose, defaultPlanName = "15-Day Sub
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="name@example.com"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                 />
               </div>
 
@@ -143,7 +143,7 @@ export function TrialStartModal({ isOpen, onClose, defaultPlanName = "15-Day Sub
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="+91 98765 43210"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                 />
               </div>
             </div>
@@ -154,7 +154,7 @@ export function TrialStartModal({ isOpen, onClose, defaultPlanName = "15-Day Sub
                 <select
                   value={formData.curriculum}
                   onChange={(e) => setFormData({ ...formData, curriculum: e.target.value })}
-                  className="w-full px-2.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-2.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white focus:outline-none focus:border-purple-500"
                 >
                   <option value="CBSE">CBSE</option>
                   <option value="ICSE">ICSE</option>
@@ -167,7 +167,7 @@ export function TrialStartModal({ isOpen, onClose, defaultPlanName = "15-Day Sub
                 <select
                   value={formData.grade}
                   onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
-                  className="w-full px-2.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-2.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white focus:outline-none focus:border-purple-500"
                 >
                   <option value="Grade 8">Grade 8</option>
                   <option value="Grade 9">Grade 9</option>
@@ -182,7 +182,7 @@ export function TrialStartModal({ isOpen, onClose, defaultPlanName = "15-Day Sub
                 <select
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-2.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-2.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white focus:outline-none focus:border-purple-500"
                 >
                   <option value="Mathematics">Mathematics</option>
                   <option value="Physics">Physics</option>

@@ -127,7 +127,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                   value={formData.schoolName}
                   onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
                   placeholder="School Name"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                 />
               </div>
 
@@ -141,7 +141,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                   value={formData.contactPerson}
                   onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
                   placeholder="Name & Designation"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                 />
               </div>
             </div>
@@ -157,7 +157,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                   value={formData.workEmail}
                   onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
                   placeholder="email@school.edu"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                 />
               </div>
 
@@ -171,7 +171,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="+91 98765 43210"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                 />
               </div>
             </div>
@@ -184,7 +184,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                 <select
                   value={formData.numberOfStudents}
                   onChange={(e) => setFormData({ ...formData, numberOfStudents: e.target.value })}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white focus:outline-none focus:border-purple-500"
                 >
                   <option value="100-300">100 - 300 Students</option>
                   <option value="300-500">300 - 500 Students</option>
@@ -200,7 +200,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                 <select
                   value={formData.curriculum}
                   onChange={(e) => setFormData({ ...formData, curriculum: e.target.value })}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white focus:outline-none focus:border-purple-500"
                 >
                   <option value="CBSE">CBSE</option>
                   <option value="ICSE">ICSE</option>
@@ -219,7 +219,7 @@ export function DemoBookingModal({ isOpen, onClose }: DemoBookingModalProps) {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="e.g. Schedule preferences, grades to pilot..."
-                className="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                className="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
               />
             </div>
 

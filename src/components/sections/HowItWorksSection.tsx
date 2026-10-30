@@ -162,8 +162,40 @@ export function HowItWorksSection() {
           })}
         </div>
 
+        {/* Mobile Step Selector Tabs (Placed above detail card for natural mobile UX) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 lg:hidden">
+          {steps.map((st, i) => {
+            const Icon = st.icon;
+            const isActive = activeStep === i;
+            return (
+              <button
+                key={st.number}
+                type="button"
+                onClick={() => setActiveStep(i)}
+                className={`p-3 rounded-xl text-left border transition-all flex items-center gap-2.5 ${
+                  isActive
+                    ? "bg-purple-900/70 border-purple-500 text-white shadow-md shadow-purple-950/60"
+                    : "bg-slate-900/80 border-slate-800 text-slate-400 hover:text-white"
+                }`}
+              >
+                <div
+                  className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs flex-shrink-0 ${
+                    isActive ? "bg-purple-600 text-white font-bold" : "bg-slate-800 text-slate-400"
+                  }`}
+                >
+                  {st.number}
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold truncate leading-tight">{st.title}</div>
+                  <div className="text-[10px] text-slate-400 hidden xs:block truncate">Phase 0{i + 1}</div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
         {/* Interactive Step Detail Card */}
-        <div className="relative rounded-2xl bg-gradient-to-br from-[#0E1428] via-[#111833] to-[#0D1226] border border-purple-500/30 p-6 sm:p-10 shadow-2xl">
+        <div className="relative rounded-2xl bg-gradient-to-br from-[#0E1428] via-[#111833] to-[#0D1226] border border-purple-500/30 p-4 sm:p-8 lg:p-10 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Column: Details */}
             <div className="lg:col-span-7">
@@ -347,24 +379,6 @@ export function HowItWorksSection() {
               )}
             </div>
           </div>
-        </div>
-
-        {/* Mobile View: Stacked process accordion buttons */}
-        <div className="grid grid-cols-2 gap-2 mt-4 lg:hidden">
-          {steps.map((st, i) => (
-            <button
-              key={st.number}
-              type="button"
-              onClick={() => setActiveStep(i)}
-              className={`p-2.5 rounded-xl text-left border text-xs font-bold ${
-                activeStep === i
-                  ? "bg-purple-900/60 border-purple-500 text-white"
-                  : "bg-slate-900 border-slate-800 text-slate-400"
-              }`}
-            >
-              Step {st.number}: {st.title}
-            </button>
-          ))}
         </div>
       </div>
     </section>

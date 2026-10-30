@@ -178,7 +178,7 @@ export function Footer({
         </div>
 
         {/* Bottom Bar: Dynamic Copyright & Back to Top */}
-        <div className="pt-8 mt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-xs">
+        <div className="pt-8 mt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-xs text-center sm:text-left">
           <div>
             &copy; {currentYear} <strong>Smarter Assessment</strong>. All rights reserved. Better Learning. Stronger Outcomes.
           </div>

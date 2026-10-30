@@ -257,7 +257,7 @@ export function ContactDemoSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Priya Sharma"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                     />
                   </div>
 
@@ -272,7 +272,7 @@ export function ContactDemoSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. priya@example.com"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                     />
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export function ContactDemoSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="e.g. +91 98765 43210"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                     />
                   </div>
 
@@ -303,7 +303,7 @@ export function ContactDemoSection() {
                       value={formData.organization}
                       onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                       placeholder="e.g. Parent / Delhi Public School"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                     />
                   </div>
                 </div>
@@ -316,7 +316,7 @@ export function ContactDemoSection() {
                     id="contact-students"
                     value={formData.studentsCount}
                     onChange={(e) => setFormData({ ...formData, studentsCount: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-purple-500"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white focus:outline-none focus:border-purple-500"
                   >
                     <option value="1">1 Student (Individual Child)</option>
                     <option value="2-5">2 - 5 Students (Family / Siblings)</option>
@@ -336,7 +336,7 @@ export function ContactDemoSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us what you'd like to achieve (e.g. Grade 10 Math preparation, batch pricing, faculty demo)..."
-                    className="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+                    className="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                   />
                 </div>
 

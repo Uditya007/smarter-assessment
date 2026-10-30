@@ -118,7 +118,7 @@ export function PricingSection({ onSelectPlan, onContactSchool }: PricingSection
           </div>
 
           {/* PLAN 2: Annual Plan (Recommended) */}
-          <div className="relative rounded-2xl bg-gradient-to-b from-[#121833] via-[#0E1428] to-[#0A0E22] border-2 border-purple-500 p-7 sm:p-8 flex flex-col shadow-2xl shadow-purple-950/60 scale-[1.02]">
+          <div className="relative rounded-2xl bg-gradient-to-b from-[#121833] via-[#0E1428] to-[#0A0E22] border-2 border-purple-500 p-6 sm:p-8 flex flex-col shadow-2xl shadow-purple-950/60 md:scale-[1.02]">
             {/* Top Ribbon Badge */}
             <div className="absolute -top-3.5 right-6 bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 font-black text-[11px] uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
               {annualPlan.badge}

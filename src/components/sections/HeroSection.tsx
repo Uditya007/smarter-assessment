@@ -52,7 +52,7 @@ export function HeroSection({ onStartTrial, onBookDemo }: HeroSectionProps) {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.12] mb-6">
+            <h1 className="text-3xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.14] mb-6">
               Every Child Can{" "}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent drop-shadow-sm font-black">
@@ -151,11 +151,11 @@ export function HeroSection({ onStartTrial, onBookDemo }: HeroSectionProps) {
               {/* Tablet Frame */}
               <div className="relative bg-[#0E1324] border border-purple-500/30 rounded-2xl p-4 sm:p-5 shadow-2xl shadow-black/80 backdrop-blur-xl">
                 {/* Tablet Top Bar: Status & Subject Switcher */}
-                <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-slate-800 text-xs">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block animate-ping" />
-                    <span className="font-semibold text-slate-300">Live Diagnostic Session</span>
-                    <span className="px-2 py-0.5 rounded-full bg-purple-900/50 text-purple-300 border border-purple-700/50 text-[10px]">
+                <div className="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 pb-3 mb-3.5 border-b border-slate-800 text-xs">
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-ping" />
+                    <span className="font-semibold text-slate-300 text-xs">Live Session</span>
+                    <span className="px-1.5 py-0.5 rounded-full bg-purple-900/50 text-purple-300 border border-purple-700/50 text-[10px]">
                       CBSE Grade 10
                     </span>
                   </div>

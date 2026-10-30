@@ -66,18 +66,21 @@ export function InteractiveDashboardPreview() {
         </div>
 
         {/* Demo Disclaimer & Perspective Switcher Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-3 rounded-2xl bg-[#0D1226] border border-slate-800 mb-6">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 p-3 rounded-2xl bg-[#0D1226] border border-slate-800 mb-6">
+          <div className="flex items-center justify-between sm:justify-start gap-2">
             <span className="px-2.5 py-1 rounded-full bg-amber-950/70 text-amber-300 border border-amber-600/40 text-[11px] font-bold">
               Demonstration Mode
             </span>
-            <span className="text-xs text-slate-400 hidden md:inline">
-              Sample academic data for demonstration purposes only.
+            <span className="text-xs text-slate-400 hidden sm:inline">
+              Sample academic data for demonstration only.
+            </span>
+            <span className="text-[10px] text-slate-500 sm:hidden">
+              Sample Data
             </span>
           </div>
 
           {/* Perspective Pills */}
-          <div className="flex items-center gap-1.5 bg-slate-900/90 p-1 rounded-xl border border-slate-800">
+          <div className="flex items-center justify-between gap-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800">
             <span className="text-[11px] text-slate-400 font-semibold px-2 hidden sm:inline">Role:</span>
             <button
               type="button"
@@ -85,13 +88,13 @@ export function InteractiveDashboardPreview() {
                 setPerspective("student");
                 setActiveTab("overview");
               }}
-              className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
+              className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
                 perspective === "student"
                   ? "bg-purple-600 text-white shadow"
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Student View
+              Student
             </button>
             <button
               type="button"
@@ -99,13 +102,13 @@ export function InteractiveDashboardPreview() {
                 setPerspective("teacher");
                 setActiveTab("overview");
               }}
-              className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
+              className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
                 perspective === "teacher"
                   ? "bg-sky-600 text-white shadow"
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Teacher View
+              Teacher
             </button>
             <button
               type="button"
@@ -113,13 +116,13 @@ export function InteractiveDashboardPreview() {
                 setPerspective("parent");
                 setActiveTab("overview");
               }}
-              className={`px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
+              className={`flex-1 sm:flex-initial px-2.5 sm:px-3 py-1 rounded-lg text-xs font-semibold transition-colors ${
                 perspective === "parent"
                   ? "bg-pink-600 text-white shadow"
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Parent View
+              Parent
             </button>
           </div>
         </div>
@@ -171,10 +174,33 @@ export function InteractiveDashboardPreview() {
             </div>
           </div>
 
-          {/* SaaS Interface Body: Sidebar + Main Workspace */}
-          <div className="grid grid-cols-1 md:grid-cols-12 min-h-[580px]">
-            {/* Sidebar */}
-            <div className="md:col-span-3 lg:col-span-2 bg-[#090D1C] border-r border-slate-800/90 p-3 sm:p-4 flex flex-col justify-between">
+          {/* Mobile Tab Bar (Horizontal Scrollable Strip on Mobile Screens) */}
+          <div className="md:hidden bg-[#090D1C] border-b border-slate-800 p-2 overflow-x-auto scrollbar-none flex items-center gap-1.5">
+            {sidebarItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeTab === item.id;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setActiveTab(item.id)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors flex-shrink-0 ${
+                    isActive
+                      ? "bg-purple-600 text-white shadow-sm"
+                      : "bg-slate-900/80 text-slate-400 hover:text-white border border-slate-800/80"
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* SaaS Interface Body: Desktop Sidebar + Main Workspace */}
+          <div className="grid grid-cols-1 md:grid-cols-12 min-h-[520px]">
+            {/* Desktop Sidebar (Hidden on mobile to save vertical scrolling) */}
+            <div className="hidden md:flex md:col-span-3 lg:col-span-2 bg-[#090D1C] border-r border-slate-800/90 p-3 sm:p-4 flex-col justify-between">
               <div className="space-y-1">
                 <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1.5">
                   Platform Menu
@@ -213,7 +239,7 @@ export function InteractiveDashboardPreview() {
             </div>
 
             {/* Main Content Area */}
-            <div className="md:col-span-9 lg:col-span-10 p-5 sm:p-7 bg-[#0A0E22] overflow-y-auto max-h-[640px]">
+            <div className="col-span-1 md:col-span-9 lg:col-span-10 p-3.5 sm:p-6 lg:p-7 bg-[#0A0E22] overflow-y-auto max-h-[640px]">
               {/* TAB 1: OVERVIEW */}
               {activeTab === "overview" && (
                 <div className="space-y-6">

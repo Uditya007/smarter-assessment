@@ -341,7 +341,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                         value={formData.schoolName}
                         onChange={(e) => setFormData({ ...formData, schoolName: e.target.value })}
                         placeholder="e.g. St. Xavier's International School"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                       />
                     </div>
 
@@ -356,7 +356,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                         value={formData.contactPerson}
                         onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
                         placeholder="e.g. Dr. Rajesh Sharma"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                       />
                     </div>
                   </div>
@@ -373,7 +373,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                         value={formData.workEmail}
                         onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
                         placeholder="e.g. principal@school.edu.in"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                       />
                     </div>
 
@@ -388,7 +388,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                       />
                     </div>
                   </div>
@@ -402,7 +402,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                         id="numberOfStudents"
                         value={formData.numberOfStudents}
                         onChange={(e) => setFormData({ ...formData, numberOfStudents: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-purple-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white focus:outline-none focus:border-purple-500"
                       >
                         <option value="100-300">100 - 300 Students</option>
                         <option value="300-500">300 - 500 Students</option>
@@ -425,7 +425,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                             curriculum: e.target.value as "CBSE" | "ICSE" | "IGCSE" | "Multiple / Other",
                           })
                         }
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-purple-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white focus:outline-none focus:border-purple-500"
                       >
                         <option value="CBSE">CBSE (Central Board)</option>
                         <option value="ICSE">ICSE (CISCE)</option>
@@ -445,7 +445,7 @@ export function SchoolSolutionsSection({ onBookDemoClick }: SchoolSolutionsProps
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="e.g. Interested in term diagnostic testing for Grades 9-10 and teacher training timeline."
-                      className="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                      className="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-700 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
                     />
                   </div>
 
